@@ -10,14 +10,14 @@ import { getGistForUser, getPublicGists } from './services/gistService';
 
 const App = () => {
   const [usernameState, setUserName] = useState();
-  const [gistListState, setGistList] = useState();
+  const [gistListState, setGistList] = useState([]);
   const usernameProviderValue = useMemo(() => ({ usernameState, setUserName}), [usernameState, setUserName]);
   const gistListProvider = useMemo(() => ({gistListState, setGistList}), [gistListState, setUserName]);
   useEffect(async ()=> {
     if(!usernameState) {
-      setGistList(await getPublicGists());
+      setGistList( (await getPublicGists()).data);
     } else {
-      setGistList(await getGistForUser(usernameState));
+      setGistList( (await getGistForUser(usernameState)).data);
 
     }
   },[usernameState])
@@ -27,8 +27,8 @@ const App = () => {
       <UsernameContext.Provider value={usernameProviderValue} >
       <GistContext.Provider value={gistListProvider}>
       <Header />
-      <GistList>
-
+      <GistList list={gistListState}>
+    
       </GistList>
       </GistContext.Provider>
 
