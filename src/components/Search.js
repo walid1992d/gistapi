@@ -1,13 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import Octicon from 'react-octicon'
+import { UsernameContext } from '../contexts/usernameContext'
 
 const Search = () => {
+  const {usernameState, setUserName} = useContext(UsernameContext);
   return (
     <Wrapper>
       <InputBox>
       <Octicon name="search" />
-      <Input placeholder="Search Gists for the username"/>
+      <Input placeholder="Search Gists for the username"  onKeyUp={(e) => {
+        if (e.key === "Enter") {
+          setUserName(e.target.value);
+        }
+      }}/>
       </InputBox>
     </Wrapper>
   )
