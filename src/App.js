@@ -13,13 +13,18 @@ const App = () => {
   const [gistListState, setGistList] = useState([]);
   const usernameProviderValue = useMemo(() => ({ usernameState, setUserName}), [usernameState, setUserName]);
   const gistListProvider = useMemo(() => ({gistListState, setGistList}), [gistListState, setUserName]);
-  useEffect(async ()=> {
-    if(!usernameState) {
-      setGistList( (await getPublicGists()).data);
-    } else {
-      setGistList( (await getGistForUser(usernameState)).data);
-
+  useEffect( ()=> {
+    const fetchData = async() => {
+      if(!usernameState) {
+        setGistList( (await getPublicGists()).data);
+      } else {
+        setGistList( (await getGistForUser(usernameState)).data);
+  
+      }
     }
+
+    fetchData();
+    
   },[usernameState])
   return (
 
