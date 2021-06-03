@@ -1,6 +1,7 @@
 
 import { useState, useMemo, useEffect } from 'react';
 import styled from 'styled-components'
+import GistList from './components/GistList';
 import Header from "./components/Header";
 import { GistContext } from './contexts/gistContext';
 import { UsernameContext } from './contexts/usernameContext';
@@ -8,25 +9,27 @@ import GlobalStyles from "./GlobalStyle";
 import { getGistForUser, getPublicGists } from './services/gistService';
 
 const App = () => {
-  const [username, setUserName] = useState();
-  const [gistList, setGistList] = useState();
-  const usernameProviderValue = useMemo(() => ({username, setUserName}), [username, setUserName]);
-  const gistListProvider = useMemo(() => ({gistList, setGistList}), [gistList, setUserName]);
+  const [usernameState, setUserName] = useState();
+  const [gistListState, setGistList] = useState();
+  const usernameProviderValue = useMemo(() => ({ usernameState, setUserName}), [usernameState, setUserName]);
+  const gistListProvider = useMemo(() => ({gistListState, setGistList}), [gistListState, setUserName]);
   useEffect(async ()=> {
-    if(!username) {
+    if(!usernameState) {
       setGistList(await getPublicGists());
     } else {
-      setGistList(await getGistForUser(username));
+      setGistList(await getGistForUser(usernameState));
 
     }
-  },[username])
+  },[usernameState])
   return (
 
     <Wrapper className="App" data-testid="app">
       <UsernameContext.Provider value={usernameProviderValue} >
       <GistContext.Provider value={gistListProvider}>
       <Header />
+      <GistList>
 
+      </GistList>
       </GistContext.Provider>
 
       </UsernameContext.Provider>
