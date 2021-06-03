@@ -56,7 +56,7 @@ const App = () => {
       <GistContext.Provider value={gistListProvider}>
       <Header />
       {
-        screenMessage ? <div>{screenMessage}</div> :  <GistList list={gistListState}>  </GistList>
+        screenMessage ? <ScreenMessageDiv>{screenMessage}</ScreenMessageDiv> :  <GistList list={gistListState}>  </GistList>
 
       }
      
@@ -73,5 +73,13 @@ const Wrapper = styled.div`
   font-size: 14px;
   line-height: 1.5;
 `;
+
+const ScreenMessageDiv = styled.div `
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 2vw;
+  font-size: 2vw;
+`
 
 export default App;
