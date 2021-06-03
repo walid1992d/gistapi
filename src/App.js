@@ -56,7 +56,7 @@ const App = () => {
       <GistContext.Provider value={gistListProvider}>
       <Header />
       {
-        screenMessage ? <ScreenMessageDiv>{screenMessage}</ScreenMessageDiv> :  <GistList list={gistListState}>  </GistList>
+        screenMessage ? <ScreenMessageDiv>{screenMessage}</ScreenMessageDiv> :  <GistListWrapper><GistList list={gistListState}>  </GistList></GistListWrapper>
 
       }
      
@@ -81,5 +81,16 @@ const ScreenMessageDiv = styled.div `
   padding: 2vw;
   font-size: 2vw;
 `
+
+const GistListWrapper = styled.div `
+  width: 40%;
+  min-width: 500px;
+  margin: auto;
+
+  @media (max-width: 500px) {
+   width: 90%;
+   min-width: unset;
+  }
+`;
 
 export default App;

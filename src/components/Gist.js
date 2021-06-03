@@ -6,5 +6,6 @@ const Gist = ({ gist }) => <GistWrapper>
 
 const GistWrapper = styled.div `
 border: 1px solid black;
+overflow:scroll;
 `;
 export default Gist
