@@ -11,16 +11,39 @@ import { getGistForUser, getPublicGists } from './services/gistService';
 const App = () => {
   const [usernameState, setUserName] = useState();
   const [gistListState, setGistList] = useState([]);
+  const [screenMessage, setScreenMessage] = useState('');
   const usernameProviderValue = useMemo(() => ({ usernameState, setUserName}), [usernameState, setUserName]);
   const gistListProvider = useMemo(() => ({gistListState, setGistList}), [gistListState, setUserName]);
   useEffect( ()=> {
     const fetchData = async() => {
+      try {
+      let response;
       if(!usernameState) {
-        setGistList( (await getPublicGists()).data);
+        response = await getPublicGists();
       } else {
-        setGistList( (await getGistForUser(usernameState)).data);
-  
+        response = await getGistForUser(usernameState);
+        
       }
+
+      const {status, data, message} = response;
+      if(status === 200) {
+        if(data.length === 0) {
+          setScreenMessage("No Results Found");
+
+        } else {
+          setGistList(data);
+          setScreenMessage("");
+          
+        }
+
+      }  else {
+        setScreenMessage("Something Went Wrong :(");
+      }
+
+     } catch(e) {
+      setScreenMessage("Something Went Wrong :(");
+
+     }
     }
 
     fetchData();
@@ -32,9 +55,12 @@ const App = () => {
       <UsernameContext.Provider value={usernameProviderValue} >
       <GistContext.Provider value={gistListProvider}>
       <Header />
-      <GistList list={gistListState}>
+      {
+        screenMessage ? <div>{screenMessage}</div> :  <GistList list={gistListState}>  </GistList>
+
+      }
+     
     
-      </GistList>
       </GistContext.Provider>
 
       </UsernameContext.Provider>
