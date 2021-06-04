@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import Octicon from 'react-octicon'
-const formatDate = (rawDate) => {
+export const formatDate = (rawDate) => {
     const date = new Date(rawDate);
 
-    return `${date.getMonth()+1}/${date.getDay()}/${date.getFullYear()}`
+    return `${date.getMonth()+1}/${date.getDate()}/${date.getFullYear()}`
 }
 const Gist = ({ gist }) => <GistWrapper>
     <Header>
