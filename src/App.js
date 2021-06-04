@@ -56,7 +56,7 @@ const App = () => {
       <GistContext.Provider value={gistListProvider}>
       <Header />
       {
-        screenMessage ? <ScreenMessageDiv>{screenMessage}</ScreenMessageDiv> :  <GistListWrapper><GistList list={gistListState}>  </GistList></GistListWrapper>
+        screenMessage ? <ScreenMessageDiv>{screenMessage}</ScreenMessageDiv> :  <GistListWrapper><GistList>  </GistList></GistListWrapper>
 
       }
      
