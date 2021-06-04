@@ -1,124 +1,124 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Gist Component should render correctly 1`] = `
-<div
-  className="sc-bdnxRM clTehT"
->
+<div>
   <div
-    className="sc-gtsrHT jABBne"
+    class="sc-bdnxRM clTehT"
   >
     <div
-      className="sc-dlnjwi dGhCdW"
+      class="sc-gtsrHT jABBne"
     >
-      <a
-        className="sc-gKAaRy jqxyhB"
-        href="https://github.com/st3fan"
-        target="__blank"
+      <div
+        class="sc-dlnjwi dGhCdW"
       >
-        <img
-          className="sc-hKFxyN jmpRVi"
-          src="https://avatars.githubusercontent.com/u/28052?v=4"
-        />
-        <div
-          className="sc-eCApnc gcOtLf"
+        <a
+          class="sc-gKAaRy jqxyhB"
+          href="https://github.com/st3fan"
+          target="__blank"
         >
-          st3fan
-        </div>
-      </a>
+          <img
+            class="sc-hKFxyN jmpRVi"
+            src="https://avatars.githubusercontent.com/u/28052?v=4"
+          />
+          <div
+            class="sc-eCApnc gcOtLf"
+          >
+            st3fan
+          </div>
+        </a>
+      </div>
+      <div
+        class="sc-jSFjdj iARNGw"
+      >
+        <a
+          class="sc-gKAaRy jqxyhB"
+        >
+          <span
+            class="octicon octicon-code"
+          />
+          <div
+            class="sc-iCoGMd lmxDLp"
+          >
+             
+            1
+             Files
+          </div>
+        </a>
+        <a
+          class="sc-gKAaRy jqxyhB"
+          href="https://api.github.com/gists/f2844d77d44c6203622f8192b20983d9/forks"
+          target="__blank"
+        >
+          <span
+            class="octicon octicon-repo-forked"
+          />
+          <div
+            class="sc-iCoGMd lmxDLp"
+          >
+             Forks
+          </div>
+        </a>
+        <a
+          class="sc-gKAaRy jqxyhB"
+          href="https://api.github.com/gists/f2844d77d44c6203622f8192b20983d9/comments"
+          target="__blank"
+        >
+          <span
+            class="octicon octicon-comment"
+          />
+          <div
+            class="sc-iCoGMd lmxDLp"
+          >
+             Comments
+          </div>
+        </a>
+        <a
+          class="sc-gKAaRy jqxyhB"
+          href="https://api.github.com/users/st3fan/starred{/owner}{/repo}"
+          target="__blank"
+        >
+          <span
+            class="octicon octicon-star"
+          />
+          <div
+            class="sc-iCoGMd lmxDLp"
+          >
+             Stars
+          </div>
+        </a>
+      </div>
     </div>
     <div
-      className="sc-jSFjdj iARNGw"
+      class="sc-fujyAs fQcKuc"
+    >
+      Created at: 
+      6/4/2021
+           Last updated: 
+      6/4/2021
+    </div>
+    <div
+      class="sc-pNWdM kNWrll"
+    />
+    <div
+      class="sc-jrsJWt rKGtP"
     >
       <a
-        className="sc-gKAaRy jqxyhB"
+        class="sc-gKAaRy sc-kEqXSa jqxyhB fqSkOs"
+        href="https://gist.githubusercontent.com/st3fan/f2844d77d44c6203622f8192b20983d9/raw/fcd0830e5276952da78867a8a43e39d1367a1340/AppStoreLinks.md"
+        target="__blank"
       >
         <span
-          className="octicon octicon-code"
+          class="octicon octicon-file"
         />
         <div
-          className="sc-iCoGMd lmxDLp"
+          class="sc-iCoGMd lmxDLp"
         >
            
-          1
-           Files
-        </div>
-      </a>
-      <a
-        className="sc-gKAaRy jqxyhB"
-        href="https://api.github.com/gists/f2844d77d44c6203622f8192b20983d9/forks"
-        target="__blank"
-      >
-        <span
-          className="octicon octicon-repo-forked"
-        />
-        <div
-          className="sc-iCoGMd lmxDLp"
-        >
-           Forks
-        </div>
-      </a>
-      <a
-        className="sc-gKAaRy jqxyhB"
-        href="https://api.github.com/gists/f2844d77d44c6203622f8192b20983d9/comments"
-        target="__blank"
-      >
-        <span
-          className="octicon octicon-comment"
-        />
-        <div
-          className="sc-iCoGMd lmxDLp"
-        >
-           Comments
-        </div>
-      </a>
-      <a
-        className="sc-gKAaRy jqxyhB"
-        href="https://api.github.com/users/st3fan/starred{/owner}{/repo}"
-        target="__blank"
-      >
-        <span
-          className="octicon octicon-star"
-        />
-        <div
-          className="sc-iCoGMd lmxDLp"
-        >
-           Stars
+          AppStoreLinks.md
+           
         </div>
       </a>
     </div>
-  </div>
-  <div
-    className="sc-fujyAs fQcKuc"
-  >
-    Created at: 
-    6/4/2021
-         Last updated: 
-    6/4/2021
-  </div>
-  <div
-    className="sc-pNWdM kNWrll"
-  >
-    
-  </div>
-  <div
-    className="sc-jrsJWt rKGtP"
-  >
-    <a
-      className="sc-gKAaRy sc-kEqXSa jqxyhB fqSkOs"
-      href="https://gist.githubusercontent.com/st3fan/f2844d77d44c6203622f8192b20983d9/raw/fcd0830e5276952da78867a8a43e39d1367a1340/AppStoreLinks.md"
-      target="__blank"
-    >
-      <span
-        className="octicon octicon-file"
-      />
-      <div
-        className="sc-iCoGMd lmxDLp"
-      >
-         
-        AppStoreLinks.md
-         
-      </div>
-    </a>
   </div>
 </div>
 `;

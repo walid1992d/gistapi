@@ -1,5 +1,5 @@
+import { render } from '@testing-library/react';
 import React from 'react';
-import renderer from 'react-test-renderer';
  import Gist from './Gist';
  import {formatDate} from './Gist';
 describe("Gist Component", () => {
@@ -51,9 +51,9 @@ describe("Gist Component", () => {
         "truncated": false
       };
     it('should render correctly', () => {
-        const gisComponent = renderer
-          .create(<Gist gist={gistData}></Gist>)
-        expect(gisComponent).toMatchSnapshot();
+        const {container} = render
+          (<Gist gist={gistData}></Gist>)
+        expect(container).toMatchSnapshot();
       });
 
       describe("formatDate()", ()=> {
