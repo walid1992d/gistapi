@@ -8,13 +8,13 @@ jest.mock('./Gist', ()=> {
 describe("GistList Component", ()=> {
     const list = [{url: '1'}, {url:'2'}]
     it("should render correctly", () => {
-        const component = render(
+        const {container} = render(
             <GistContext.Provider value={{gistListState: list, setGistList:jest.fn()}}>
                 <GistList></GistList>
             </GistContext.Provider>
         )
-        expect(component).toMatchSnapshot();
-        expect(component.container.querySelectorAll('.gist').length).toEqual(2)
+        expect(container).toMatchSnapshot();
+        expect(container.querySelectorAll('.gist').length).toEqual(2)
     });
     
 })
