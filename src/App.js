@@ -13,7 +13,7 @@ const App = () => {
   const [gistListState, setGistList] = useState([]);
   const [screenMessage, setScreenMessage] = useState('');
   const usernameProviderValue = useMemo(() => ({ usernameState, setUserName}), [usernameState, setUserName]);
-  const gistListProvider = useMemo(() => ({gistListState, setGistList}), [gistListState, setUserName]);
+  const gistListProvider = useMemo(() => ({gistListState, setGistList}), [gistListState, setGistList]);
   useEffect( ()=> {
     const fetchData = async() => {
       try {
