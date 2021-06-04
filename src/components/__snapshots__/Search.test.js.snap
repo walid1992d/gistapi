@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search Component should render correctly 1`] = `
+<div>
+  <div
+    class="sc-bdnxRM fVdoXT"
+  >
+    <div
+      class="sc-gtsrHT bHTyut"
+    >
+      <span
+        class="octicon octicon-search"
+      />
+      <input
+        class="sc-dlnjwi fozKkc"
+        data-testid="searchInput"
+        placeholder="Search Gists for the username"
+      />
+    </div>
+  </div>
+</div>
+`;

@@ -9,7 +9,7 @@ const Search = () => {
     <Wrapper>
       <InputBox>
       <Octicon name="search" />
-      <Input placeholder="Search Gists for the username"  onKeyUp={(e) => {
+      <Input data-testid="searchInput" placeholder="Search Gists for the username"  onKeyUp={(e) => {
         if (e.key === "Enter") {
           setUserName(e.target.value);
         }
