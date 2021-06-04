@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should display error if fetching gists fails 1`] = `
+<div>
+  <div
+    class="sc-bdnxRM SuNwZ App"
+    data-testid="app"
+  >
+    <div
+      id="header"
+    />
+    <div
+      class="sc-gtsrHT hyXrb"
+    >
+      Something Went Wrong :(
+    </div>
+  </div>
+</div>
+`;
+
+exports[`App should display no results message if gits result is empty 1`] = `
+<div>
+  <div
+    class="sc-bdnxRM SuNwZ App"
+    data-testid="app"
+  >
+    <div
+      id="header"
+    />
+    <div
+      class="sc-gtsrHT hyXrb"
+    >
+      No Results Found
+    </div>
+  </div>
+</div>
+`;
+
+exports[`App should render correctly if fetching gists succeeds 1`] = `
+<div>
+  <div
+    class="sc-bdnxRM SuNwZ App"
+    data-testid="app"
+  >
+    <div
+      id="header"
+    />
+    <div
+      class="sc-dlnjwi bnvrgC"
+    >
+      <div
+        id="list"
+      />
+    </div>
+  </div>
+</div>
+`;
