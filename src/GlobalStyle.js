@@ -9,6 +9,9 @@ const GlobalStyles = createGlobalStyle`
   *{
     box-sizing: border-box;
   }
+  .octicon {
+    font-size: inherit;
+  }
 `;
 
 export default GlobalStyles;
